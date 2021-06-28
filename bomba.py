@@ -6,7 +6,7 @@ def populate_left(x,y,value):
 	mat[x][y] = value
 	populate_diagonal_left_up(x,y,value)
 	populate_diagonal_left_down(x,y,value)
-	if(x==0 or y==0):
+	if(x==0):
 		return 0;
 	else:
 		populate_left(x-1,y,value+12)
@@ -68,8 +68,8 @@ def populate_up(x,y,value):
 
 
 def printarray():
-	for x in range(xlenght):
-		for y in range(ylenght):
+	for x in range(xlenght-1):
+		for y in range(ylenght-1):
 			print(mat[y][x], end=' | ')
 		print()
 	print('\n---------------')
